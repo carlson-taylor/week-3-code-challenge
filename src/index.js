@@ -88,7 +88,7 @@ function handleTicket(span2, data) {
   }
 
   function handleDelete(movie){
-    fetch(` http://localhost:3000/films/${movie.id}`,{
+    fetch(` https://json-server-bnf5.onrender.com/${movie.id}`,{
         method:"DELETE"
     })
     .then(res=>res.json)
