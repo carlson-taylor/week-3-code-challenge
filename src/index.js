@@ -30,7 +30,7 @@ function dispalyMovieOne(data){
     let h1=document.getElementById("title")
     h1.textContent=data.title
     let div=document.getElementById("runtime")
-    div.textContent=`${data.runtime }  minutes`
+    div.textContent=`${data.runtime } ` 
     let p=document.getElementById("film-info")
     p.textContent=data.description
     let span=document.getElementById("showtime")
@@ -50,7 +50,7 @@ function handleClick(data){
     let h1=document.getElementById("title")
     h1.textContent=data.title
     let div=document.getElementById("runtime")
-    div.textContent=`${data.runtime }  minutes`
+    div.textContent=`${data.runtime }` 
     let p=document.getElementById("film-info")
     p.textContent=data.description
     let span=document.getElementById("showtime")
