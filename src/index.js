@@ -1,5 +1,5 @@
 function moviesArray(){
-    fetch("https://database-flatadango.onrender.com/films")
+    fetch("https://database-flatadango.onrender.com/films/")
     .then(res=>res.json())
     .then(moviesArray=>{
         displayMovieTitles(moviesArray)
@@ -88,7 +88,7 @@ function handleTicket(span2, data) {
   }
 
   function handleDelete(movie){
-    fetch(` https://database-flatadango.onrender.com/${movie.id}`,{
+    fetch(` https://database-flatadango.onrender.com/films/${movie.id}`,{
         method:"DELETE"
     })
     .then(res=>res.json)
