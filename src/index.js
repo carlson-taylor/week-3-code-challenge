@@ -1,5 +1,5 @@
 function moviesArray(){
-    fetch(" http://localhost:3000/films")
+    fetch("https://database-flatadango.onrender.com/films")
     .then(res=>res.json())
     .then(moviesArray=>{
         displayMovieTitles(moviesArray)
@@ -30,7 +30,7 @@ function dispalyMovieOne(data){
     let h1=document.getElementById("title")
     h1.textContent=data.title
     let div=document.getElementById("runtime")
-    div.textContent=`${data.runtime }  minutes`
+    div.textContent=`${data.runtime } ` 
     let p=document.getElementById("film-info")
     p.textContent=data.description
     let span=document.getElementById("showtime")
@@ -50,7 +50,7 @@ function handleClick(data){
     let h1=document.getElementById("title")
     h1.textContent=data.title
     let div=document.getElementById("runtime")
-    div.textContent=`${data.runtime }  minutes`
+    div.textContent=`${data.runtime }` 
     let p=document.getElementById("film-info")
     p.textContent=data.description
     let span=document.getElementById("showtime")
@@ -88,7 +88,7 @@ function handleTicket(span2, data) {
   }
 
   function handleDelete(movie){
-    fetch(` http://localhost:3000/films/${movie.id}`,{
+    fetch(` https://database-flatadango.onrender.com/${movie.id}`,{
         method:"DELETE"
     })
     .then(res=>res.json)
